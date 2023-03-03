@@ -50,11 +50,12 @@ section nav {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  height: 100px;
+  height: 80px;
   position: relative;
 }
 section nav .logo {
   width: 15%;
+  height: 100%;
 }
 
 section nav .logo img {
@@ -62,7 +63,7 @@ section nav .logo img {
   float: left;
   object-fit: contain;
   aspect-ratio: 3/2;
-  height: 100px;
+  height: 100%;
   mix-blend-mode: color-burn;
 }
 section nav ul {
@@ -260,7 +261,7 @@ button:hover::before {
 /* about */
 .about_us {
   width: 100%;
-  height: 100%;
+  height: 700px;
 }
 .about_us h3 {
   text-align: center;
@@ -273,8 +274,56 @@ button:hover::before {
 .about_us .about_container {
   width: 95%;
   margin: 0 auto;
+  height: 100%;
+}
+.card {
+  width: calc(33.333% - 30px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 30px;
+  height: 500px;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: transform 1500ms;
+  float: left;
+  margin: 0 15px;
+}
+.card .card-front {
+  width: 100%;
+}
+.card .card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+.card-back {
+  padding: 0 10px;
+  text-align: center;
+
+  transform: rotateY(180deg);
+  position: relative;
+}
+.card-back p {
+  color: var(--color-third);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 30px;
+}
+.card:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
 /* contact to us */
 
 .contact_Us {
@@ -489,16 +538,17 @@ button:hover::before {
   height: 100%;
   cursor: pointer;
 }
+.news .new-container .new-bt .new-card:hover img {
+  scale: 1.1;
+  transition: all 0.3s;
+}
 .news .new-container .new-bt .new-card img {
   width: 100%;
   border-radius: 30px;
   height: 70%;
   object-fit: cover;
 }
-.news .new-container .new-bt .new-card img:hover {
-  scale: 1.1;
-  transition: all 0.3s;
-}
+
 .news .new-container .new-bt .new-card h5 {
   font-size: 20px;
   font-weight: 700;
@@ -508,4 +558,44 @@ button:hover::before {
 }
 .news .new-container .new-bt .new-card p {
   color: gray;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 30px 0;
+  height: 300px;
+  clear: both;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer .footer-main .footer-tag {
+  text-align: center;
+  line-height: 22px;
+  width: 20%;
+  float: left;
+}
+.footer-main {
+  height: 100%;
+}
+footer .footer-main .footer-tag h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+footer .footer-main .footer-tag a {
+  margin: 10px;
+  display: block;
+  text-decoration: none;
+}
+footer .footer-main .footer-tag a {
+  margin: 10px;
+  color: #222f33;
+  text-transform: capitalize;
+}
+footer .footer-main .footer-tag a:hover {
+  background: var(--color-second);
+  width: 50%;
+  color: antiquewhite;
 }
