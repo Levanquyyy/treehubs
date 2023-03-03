@@ -465,7 +465,7 @@ button:hover::before {
   color: gray;
 }
 .news .new-container .new-top .new-top--intro .new-top-wrap a {
-  padding: 10px 30px;
+  padding: 10px 20px;
   color: white;
   background-color: var(--color-first);
   border-radius: 20px;
