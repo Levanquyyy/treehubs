@@ -8,9 +8,8 @@
 }
 :root {
   --color-first: #bbf486;
-  --color-second: #ff884d;
-  --color-third: #e27f86;
-  --color-four: #7aef9e;
+  --color-second: #71ff2f;
+  --color-third: #dcff2f;
 }
 .center {
   display: grid;
@@ -75,16 +74,23 @@ section nav ul {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+section nav ul li:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.4s;
+  border-radius: 50%;
+}
 section nav ul li {
   display: inline-block;
   margin: 0 16px;
+  padding: 20px 10px;
+  transition: all 0.4s;
 }
 section nav ul li a {
-  color: white;
+  color: #333;
   font-size: 17px;
   text-transform: capitalize;
   transition: 0.2s;
-  font-weight: 700;
+  font-weight: 500;
 }
 section nav ul li a::after {
   content: "";
@@ -153,8 +159,8 @@ button {
   background: var(--color-first);
   color: ghostwhite;
   right: 50%;
-  bottom: 15%;
-  transform: translateX(50%);
+  bottom: 50%;
+  transform: translate(50%, 50%);
 }
 
 button span {
@@ -224,6 +230,7 @@ button:hover::before {
   font-size: 20px;
 }
 .box strong {
+  padding: 10px 0;
   margin-bottom: 10px;
 }
 .box img {
@@ -261,7 +268,9 @@ button:hover::before {
 /* about */
 .about_us {
   width: 100%;
-  height: 700px;
+  height: 500px;
+  margin-top: 90px;
+  background-image: url(../img/tes.jpeg);
 }
 .about_us h3 {
   text-align: center;
@@ -272,7 +281,7 @@ button:hover::before {
   margin: 30px 0;
 }
 .about_us .about_container {
-  width: 95%;
+  width: 75%;
   margin: 0 auto;
   height: 100%;
 }
@@ -282,7 +291,7 @@ button:hover::before {
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 30px;
-  height: 500px;
+  height: 400px;
   transform-style: preserve-3d;
   position: relative;
   transition: transform 1500ms;
@@ -306,11 +315,12 @@ button:hover::before {
   position: relative;
 }
 .card-back p {
-  color: var(--color-third);
+  color: #333;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
+  padding: 0 10px;
 }
 .card-front,
 .card-back {
@@ -329,11 +339,11 @@ button:hover::before {
 .contact_Us {
   width: 100%;
   height: 100%;
-  margin-bottom: 30px;
+  margin-top: 100px;
 }
 .contact_Us .contact_ct {
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   color: var(--color-second);
   padding: 30px 0;
   text-transform: capitalize;
@@ -371,12 +381,14 @@ button:hover::before {
   transform: translateY(-50%);
 }
 .contact_Us .contact_container .contact_card-r form {
-  height: 100%;
+  height: 400px;
+  position: relative;
+  text-align: center;
 }
 .contact_Us .contact_container .contact_card-r form .contact-input label {
   line-height: 25px;
   cursor: pointer;
-  color: var(--color-third);
+  color: var(--color-second);
 }
 .contact_Us .contact_container .contact_card-r form .contact-input input {
   padding: 10px 20px;
@@ -385,21 +397,37 @@ button:hover::before {
   border: 1px solid var(--color-second);
   width: 80%;
 }
+.contact-input {
+  margin: 30px 0;
+}
+.labell {
+  text-align: left;
+  width: 90%;
+  float: right;
+}
 .contact-btn {
   text-decoration: none;
-  background: var(--color-second);
+  background: #9ceb54;
   text-align: center;
-  padding: 10px;
-  border-radius: 20px;
-
+  padding: 13px;
+  border-radius: 30px;
   display: inline-block;
-  width: 80%;
-  margin-top: 30px;
+  width: 50%;
+  margin-top: 10px;
   bottom: 90px;
   color: #333;
 }
+
+.contact_Us
+  .contact_container
+  .contact_card-r
+  form
+  .contact-input
+  input::placeholder {
+  color: rgb(192, 189, 189);
+}
 .contact-btn:hover {
-  background: var(--color-third);
+  background: var(--color-second);
   color: white;
 }
 
@@ -412,10 +440,11 @@ button:hover::before {
 .our_partner {
   width: 100%;
   height: 500px;
+  margin: 100px 0;
 }
 .our_partner .our_partner-ct {
   text-align: center;
-  color: var(--color-third);
+  color: var(--color-second);
   font-size: 25px;
   text-transform: uppercase;
   margin: 50px 0;
@@ -447,6 +476,8 @@ button:hover::before {
 .news {
   width: 100%;
   height: 100%;
+  background-image: url(../img/tes.jpeg);
+  margin-bottom: 200px;
 }
 .news .new-container {
   width: 95%;
@@ -456,16 +487,18 @@ button:hover::before {
   color: var(--color-second);
   margin: 30px 0;
   font-weight: 700;
+  font-size: 30px;
+  text-align: center;
 }
 
 .news .new-container .new-top {
-  height: 600px;
+  height: 400px;
   margin-bottom: 50px;
   width: 100%;
 }
 
 .news .new-container .new-top .new-img {
-  width: calc(100% - 30%);
+  width: calc(60% - 30px);
   float: left;
   margin: 0 15px;
   height: 100%;
@@ -490,7 +523,7 @@ button:hover::before {
   border-radius: 30px;
 }
 .news .new-container .new-top .new-top--intro {
-  width: calc(100% - 75%);
+  width: calc(40% - 30px);
   float: right;
   height: 100%;
   position: relative;
@@ -552,11 +585,9 @@ button:hover::before {
 
 .news .new-container .new-bt .new-card h5 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
 }
-.news .new-container .new-bt .new-card h5:hover {
-  color: blue;
-}
+
 .news .new-container .new-bt .new-card p {
   color: gray;
 }
@@ -583,7 +614,8 @@ footer .footer-main .footer-tag {
 }
 footer .footer-main .footer-tag h2 {
   margin-bottom: 25px;
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: 500;
 }
 footer .footer-main .footer-tag a {
   margin: 10px;
@@ -592,11 +624,11 @@ footer .footer-main .footer-tag a {
 }
 footer .footer-main .footer-tag a {
   margin: 10px;
-  color: #222f33;
+  color: gray;
   text-transform: capitalize;
 }
 footer .footer-main .footer-tag a:hover {
-  background: var(--color-second);
+  background: var(--color-first);
   width: 50%;
-  color: antiquewhite;
+  color: #333;
 }
