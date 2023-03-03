@@ -523,7 +523,7 @@ button:hover::before {
   background-color: var(--color-second);
 }
 .news .new-container .new-top .new-top--intro .new-top-wrap a:hover i {
-  padding-left: 10px;
+  padding-left: 5px;
   transition: all 0.3s;
 }
 
