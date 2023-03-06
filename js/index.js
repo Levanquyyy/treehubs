@@ -5,7 +5,7 @@ const img_container = document.querySelector(".container-tree");
 const button1 = document.querySelector(".click-tks");
 const about_img = document.querySelector(".about-img");
 const heart = document.querySelector(".heart");
-
+const cards = document.querySelectorAll(".card");
 button.addEventListener("click", () => {
   img_container.style.removeProperty("display");
 
@@ -15,7 +15,7 @@ button.addEventListener("click", () => {
     x: -400,
     opacity: 0,
     transition: 0.5,
-    delay: 2.9,
+    delay: 2.4,
   });
 
   gsap.fromTo(
@@ -68,4 +68,43 @@ function change(ic) {
   }
 }
 
-// chho wodth mnac dinh la 60% roi float right k cho le
+// responsive
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  if (nav.style.display === "none") {
+    nav.style.display = "inline-block";
+  } else {
+    nav.style.display = "none";
+  }
+});
+
+// khi nguoi dung nhap bat ki dau thi dong menu lai
+document.addEventListener("click", (event) => {
+  const isClickInside =
+    nav.contains(event.target) || menuToggle.contains(event.target);
+
+  if (!isClickInside) {
+    nav.style.display = "none";
+  }
+});
+
+// kiem tra neu man hinh lon hon 768px thi hover lat mat nguoc lai cho nguoi dùng click
+
+for (var i = 0; i < cards.length; i++) {
+  var card = cards[i];
+
+  if (window.innerWidth >= 768) {
+    card.addEventListener("mouseenter", function () {
+      this.classList.add("rotate");
+    });
+    card.addEventListener("mouseleave", function () {
+      this.classList.remove("rotate");
+    });
+  } else {
+    card.addEventListener("click", function () {
+      this.classList.toggle("rotate");
+    });
+  }
+}
