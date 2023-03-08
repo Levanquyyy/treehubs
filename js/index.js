@@ -69,6 +69,7 @@ function change(ic) {
 }
 
 // responsive
+
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav ul");
 
@@ -81,14 +82,6 @@ menuToggle.addEventListener("click", () => {
 });
 
 // khi nguoi dung nhap bat ki dau thi dong menu lai
-document.addEventListener("click", (event) => {
-  const isClickInside =
-    nav.contains(event.target) || menuToggle.contains(event.target);
-
-  if (!isClickInside) {
-    nav.style.display = "none";
-  }
-});
 
 // kiem tra neu man hinh lon hon 768px thi hover lat mat nguoc lai cho nguoi dùng click
 
