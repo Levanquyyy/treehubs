@@ -23,8 +23,7 @@ h3 {
 }
 h2,
 h3,
-p,
-a {
+p {
   text-transform: capitalize;
 }
 .rotate {
@@ -370,8 +369,15 @@ button:hover::before {
   margin: 0 15px;
   cursor: pointer;
 }
+
 .card .card-front {
   width: 100%;
+}
+.rota {
+  font-size: 24px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
 }
 .card .card-front img {
   width: 100%;
@@ -496,6 +502,7 @@ button:hover::before {
 .contact-btn:hover {
   background: var(--color-four);
   color: white;
+  transition: all 0.5s;
 }
 
 .about_card-l {
@@ -699,14 +706,21 @@ footer .footer-main .footer-tag a {
 footer .footer-main .footer-tag a {
   margin: 10px;
   color: gray;
+}
+footer .footer-main .footer-tag:nth-child(1) a {
   text-transform: capitalize;
+}
+footer .footer-main .footer-tag h2 {
+  margin: 0;
 }
 footer .footer-main .footer-tag a:hover {
   background: var(--color-second);
   width: 50%;
   color: #333;
 }
-
+footer .footer-main .footer-tag:nth-child(5) h2 {
+  margin-bottom: 24px;
+}
 /* responsive cho dien thoai*/
 
 @media (max-width: 768px) {
@@ -815,7 +829,7 @@ footer .footer-main .footer-tag a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 74%;
     text-align: center;
   }
   section .section-r {
@@ -828,7 +842,7 @@ footer .footer-main .footer-tag a:hover {
   }
   section .section-l h2,
   p {
-    font-size: 16px;
+    font-size: 20px;
   }
   /* contact */
   .contact_Us {
@@ -859,6 +873,8 @@ footer .footer-main .footer-tag a:hover {
   .contact_Us .contact_container .contact_card-r form {
     height: 100%;
     text-align: left;
+    width: 90%;
+    margin: 0 auto;
   }
   .contact-input {
     margin: 5px 0;
@@ -876,7 +892,8 @@ footer .footer-main .footer-tag a:hover {
     bottom: 0;
     margin: 0;
     padding: 10px 12px;
-    border-radius: 0;
+    border-radius: 10px;
+    transition: all 0.3s;
   }
 
   /* our-partner */
@@ -885,7 +902,7 @@ footer .footer-main .footer-tag a:hover {
   }
   .our_partner .our_partner__container .our_partner-card {
     width: 100%;
-    height: calc(100% / 3);
+    height: calc(33.333% - 20px);
     object-fit: contain;
     margin: 10px 0;
   }
@@ -893,6 +910,11 @@ footer .footer-main .footer-tag a:hover {
   /* news */
   .news .new-container {
     width: 100%;
+  }
+  .news-title {
+    font-size: 24px;
+    margin-top: 35px;
+    font-weight: 500;
   }
   .news .new-container .new-bt {
     height: 900px;
@@ -941,6 +963,10 @@ footer .footer-main .footer-tag a:hover {
     width: calc(100% / 4);
     float: left;
     margin: 0;
+    font-size: 24px;
+  }
+  footer .footer-main .footer-tag a {
+    margin: 12px;
   }
 }
 

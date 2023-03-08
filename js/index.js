@@ -81,10 +81,6 @@ menuToggle.addEventListener("click", () => {
   }
 });
 
-// khi nguoi dung nhap bat ki dau thi dong menu lai
-
-// kiem tra neu man hinh lon hon 768px thi hover lat mat nguoc lai cho nguoi dùng click
-
 for (var i = 0; i < cards.length; i++) {
   var card = cards[i];
 
