@@ -354,6 +354,9 @@ button:hover::before {
   width: 75%;
   margin: 0 auto;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card {
   width: calc(100% / 3 - 30px);
@@ -398,6 +401,7 @@ button:hover::before {
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
+  font-weight: 500;
   padding: 0 10px;
 }
 .card-front,
@@ -431,6 +435,8 @@ button:hover::before {
   position: relative;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 50px;
+  background-image: url(../img/tes.jpeg);
+  background-position: right;
 }
 .contact_Us .contact_container .contact_card-l {
   width: calc(50% - 30px);
@@ -905,6 +911,10 @@ footer .footer-main .footer-tag:nth-child(5) h2 {
     height: calc(33.333% - 20px);
     object-fit: contain;
     margin: 10px 0;
+  }
+
+  .about_us .about_container {
+    flex-direction: column;
   }
 
   /* news */
